@@ -7,6 +7,6 @@ class AppRoutes {
   static Map<String,WidgetBuilder> getAll() => _routes;
   static final  Map<String,WidgetBuilder> _routes = {
      HomeScreen.route:(ctx)=>  const  HomeScreen(),
-    AddNotesScreen.route: (ctx) => const  AddNotesScreen(),
+     AddNotesScreen.route: (ctx) => const  AddNotesScreen(),
   };
 }

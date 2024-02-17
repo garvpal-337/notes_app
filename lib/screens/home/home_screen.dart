@@ -63,6 +63,9 @@ class _HomeScreenState extends State<HomeScreen> {
         icon:  Icon(Icons.cloud,color: Colors.blue.shade400,))),
       body: BlocBuilder<NotesBloc,List<NotesModel>>(
         builder: (context,state) {    
+          if(state.isEmpty){
+            return const  Center(child: Text('No note is added yet !'),);
+          }
           return ListView.builder(
               padding: const EdgeInsets.only(top: 15),
               itemCount: state.length,

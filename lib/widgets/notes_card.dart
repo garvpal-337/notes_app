@@ -30,8 +30,11 @@ class NotesCard extends StatelessWidget {
         child: Row(children: [
           myIconButton(icon:  const Icon(CupertinoIcons.pencil_ellipsis_rectangle,color: myWhite,size: 29,),color: myPrimaryColor,radius: 10),
          const  SizedBox(width: 10,),
-           Text(item.title ?? '',style: const TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
-           const Spacer(),
+           Expanded(child: Text(item.title ?? '',
+           maxLines: 1,
+           overflow: TextOverflow.ellipsis,
+           style: const TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+           ),
            myIconButton(
             onTap: (){
             showMyDialoge(context: context, content: const  Text('Do You really want to delete this note ?',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),

@@ -62,6 +62,7 @@ class _AddNotesScreenState extends State<AddNotesScreen> {
               Padding(
                 padding: const  EdgeInsets.symmetric(horizontal: 15,vertical: 2),
                 child: TextFormField(
+                  maxLines: null,
                   controller: _titleController,
                   cursorColor: myPrimaryColor,
                   style: const  TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
